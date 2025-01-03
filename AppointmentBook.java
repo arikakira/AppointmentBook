@@ -10,9 +10,9 @@ public class AppointmentBook {
      * false otherwise
      * Preconditions: 1 <= period <= 8; 0 <= minute <= 59
      */
-    private boolean isMinuteFree(int period, int minute) {
-        return schedule[period-1][minute];
-    }
+//    private boolean isMinuteFree(int period, int minute) {
+//        return schedule[period-1][minute];
+//    }
 
     /**
      * Marks the block of minutes that starts at startMinute in period and
@@ -20,8 +20,8 @@ public class AppointmentBook {
      * Preconditions: 1 <= period <= 8; 0 <= startMinute <= 59;
      * 1 <= duration <= 60
      */
-    private void reserveBlock(int period, int startMinute, int duration) {
-        /* implementation not shown */ }
+//    private void reserveBlock(int period, int startMinute, int duration) {
+//        /* implementation not shown */ }
 
     /**
      * Searches for the first block of duration free minutes during period, as
@@ -49,4 +49,9 @@ public class AppointmentBook {
 
     // There may be instance variables, constructors, and methods that are not shown.
 
+    public void printPeriod(int period) {
+        for(int i=0; i<schedule[period-1].length; i++) {
+            System.out.println(i + " " + schedule[period - 1][i]);
+        }
+    }
 }
