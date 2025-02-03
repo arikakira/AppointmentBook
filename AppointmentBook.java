@@ -37,7 +37,7 @@ public class AppointmentBook {
             if(isMinuteFree(period, i)) {
                 block++;
                 if(block == duration) {
-                    
+                    return i - duration + 1;
                 }
             }
         }
