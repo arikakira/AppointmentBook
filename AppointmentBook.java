@@ -2,7 +2,7 @@ public class AppointmentBook {
     private boolean[][] schedule;
 
     public AppointmentBook(boolean[][] sched) {
-        sched = schedule;
+        schedule = sched;
     }
     
     /**
@@ -10,9 +10,9 @@ public class AppointmentBook {
      * false otherwise
      * Preconditions: 1 <= period <= 8; 0 <= minute <= 59
      */
-//    private boolean isMinuteFree(int period, int minute) {
-//        return schedule[period-1][minute];
-//    }
+    private boolean isMinuteFree(int period, int minute) {
+        return schedule[period-1][minute];
+    }
 
     /**
      * Marks the block of minutes that starts at startMinute in period and
@@ -32,7 +32,15 @@ public class AppointmentBook {
      * Preconditions: 1 <= period <= 8; 1 <= duration <= 60
      */
     public int findFreeBlock(int period, int duration) {
-        return 0;
+        int block = 0;
+        for(int i=0; i<60; i++) {
+            if(isMinuteFree(period, i)) {
+                block++;
+                if(block == duration) {
+                    
+                }
+            }
+        }
     }
 
     /**
