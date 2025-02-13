@@ -38,12 +38,9 @@ public class Main {
             b.printPeriod(period);
             period++;
         }
-        b.printPeriod(4);
-        System.out.println(b.makeAppointment(2, 4, 22));        //test case
-        b.printPeriod(4);
 
-        b.printPeriod(3);
+        System.out.println(b.makeAppointment(2, 4, 22));        //test case
         System.out.println(b.makeAppointment(3, 4, 3));     // test case
-        b.printPeriod(3);
+        System.out.println(b.makeAppointment(2, 4, 30));        // test case
     }
 }
